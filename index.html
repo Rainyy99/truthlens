@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TruthLens — README Lie Detector</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <h1>TruthLens — README Lie Detector</h1>
+  <p class="tagline">Paste a README. Get its claims checked — locally, in your browser.</p>
+</header>
+
+<main>
+  <section class="card" aria-labelledby="input-heading">
+    <h2 id="input-heading">Check a README</h2>
+
+    <label for="readme-input">README contents (Markdown)</label>
+    <textarea id="readme-input" rows="14" spellcheck="false"
+      placeholder="Paste the README Markdown here…"></textarea>
+
+    <label for="files-input">Project file list (optional, one path per line)</label>
+    <textarea id="files-input" rows="6" spellcheck="false"
+      placeholder="README.md&#10;src/index.js&#10;docs/setup.md"></textarea>
+
+    <div class="button-row">
+      <button id="sample-btn" type="button">Try the sample README</button>
+      <button id="clean-btn" type="button">Try a clean README</button>
+      <button id="analyze-btn" type="button">Analyze README</button>
+      <button id="own-btn" type="button">Analyze this repo's README</button>
+    </div>
+  </section>
+
+  <section id="report" class="card" aria-labelledby="report-heading">
+    <h2 id="report-heading">Report</h2>
+    <p id="report-hint">No report yet — paste a README above, or try one of the sample buttons.</p>
+
+    <div id="score-block" hidden>
+      <div id="score-value">–</div>
+      <div id="score-grade"></div>
+    </div>
+
+    <p id="report-summary"></p>
+    <ul id="report-findings"></ul>
+
+    <h3 id="passed-heading" hidden>Passed checks</h3>
+    <ul id="report-passed"></ul>
+  </section>
+
+  <section id="verification" class="card" aria-labelledby="verification-heading">
+    <h2 id="verification-heading">Verified with Kane CLI</h2>
+    <p>This app was built by an AI coding agent, and every feature is verified by
+      Kane CLI flows that drive a real browser against the running page. The loop is
+      closed: when a Kane run failed, the failure drove a fix, and the flow was
+      re-run until it passed — the agent and the verifier talked to each other the
+      whole way through, not just at the end.</p>
+    <ul id="kane-runs"></ul>
+  </section>
+</main>
+
+<footer>
+  <p>TruthLens — zero dependencies, everything runs in your browser.</p>
+</footer>
+
+<script src="analyze.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

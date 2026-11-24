@@ -1,0 +1,1 @@
+Go to http://127.0.0.1:8080/ and click the 'Try a clean README' button, then assert that the score shown is 100 and the report says there are no issues.

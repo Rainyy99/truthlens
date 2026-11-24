@@ -1,0 +1,1 @@
+Go to http://127.0.0.1:8080/ and click the 'Try the sample README' button, then assert that the score shown is 54 and that a finding about a broken anchor is listed in the report.

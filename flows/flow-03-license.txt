@@ -1,0 +1,1 @@
+Go to http://127.0.0.1:8080/ and click the 'Try the sample README' button, then assert that the report lists a finding that a license is claimed but no LICENSE file is in the file list.
